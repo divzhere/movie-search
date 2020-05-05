@@ -1,43 +1,55 @@
 body {
+    margin: 0;
+    padding:0;    
     font-family: sans-serif;
-  }
-  
-  
-  * {
+
+}
+
+.box {
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+input {
+    position: relative;
+    display: inline-block;
+    font-size:20px;
     box-sizing: border-box;
-  }
-  
-  form.example input[type=text] {
-    padding: 10px;
-    font-size: 14px;
-    float: left;
-    width: 80%;
+    transition: .5s;
+}
+
+input[type="text"] {
+    background: #ffffff;
+    height: 34px;
+    border:none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 10px 0 0 10px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 0.5px solid #707070;
-    border-radius: 10px;
     opacity: 1;
-    border-right: none;
-  }
-  
-  form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    color: white;
-    border-left: none;
+}
+
+.box button {
+    position: relative;
+    border-radius: 0 10px 10px 0;
+    height: 34px;
+    width:  36px;
     cursor: pointer;
+    color: #fff;
+    padding-bottom: 9px;
     background: #349AF8 0% 0% no-repeat padding-box;
     border: 0.5px solid #707070;
-    border-radius: 0px 10px 10px 0px;
     opacity: 1;
-  }
-  
-  form.example button:hover {
-    background: #0b7dda;
-  }
-  
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
+    padding: 0 0 35px 0px;
+}
+
+.box button span {
+    padding-bottom: 5px;
+}
+
+input[type="submit"]:hover{
+    background: #ffc572;
 }
