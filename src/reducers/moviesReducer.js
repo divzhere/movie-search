@@ -11,6 +11,7 @@ export default function MoviesReducer(state = initialState, action){
     const {type,payload} = action
     switch(type){
         case MOVIES_SEARCH:
+         //   console.log("ENTERS REDUCER")
             return Object.assign({},state,{
                 ...state,
                 loading: false,
