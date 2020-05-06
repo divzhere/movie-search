@@ -1,5 +1,6 @@
 import React from 'react';
 import Search from './components/Search'
+import {connect} from 'react-redux'
 import './style/style.css'
 function App() {
   return (
@@ -9,4 +10,12 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  ...state
+ })
+
+ const mapDispatchToProps = dispatch => ({
+  //simpleAction: () => dispatch(simpleAction())
+ })
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
