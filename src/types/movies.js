@@ -1,1 +1,2 @@
-export const MOVIES = "MOVIES";
+export const MOVIES_SEARCH = "MOVIES_SEARCH";
+export const MOVIES_ERROR = "MOVIES_ERROR";

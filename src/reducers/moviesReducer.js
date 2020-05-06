@@ -1,16 +1,20 @@
 import {
-    MOVIES
+    MOVIES_SEARCH
 } from '../types/movies'
 
 const initialState = {
-    movies: []
+    searchResults: [],
+    loading: true
 }
 
 export default function MoviesReducer(state = initialState, action){
-    switch(action.type){
-        case MOVIES:
+    const {type,payload} = action
+    switch(type){
+        case MOVIES_SEARCH:
             return Object.assign({},state,{
-                movies: action.payLoad
+                ...state,
+                loading: false,
+                searchResults: payload
             })
         default:
             return state
