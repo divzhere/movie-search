@@ -33,13 +33,15 @@ class Search extends Component {
                         onChange={this.handleChange.bind(this)}></input>
                         <button onClick={this.handleSubmit.bind(this)}><span className="material-icons">search</span></button>
                     </form>
-                    <div>
+                 </div>
+                 <div>
                     <table>
                         <thead>
                             <tr>
-                                <th>Title</th>
-                                <th>Year</th>
-                                <th>ImdbId</th>
+                                <th>Title <span class="material-icons">sort</span></th>
+                                <th>Year <span class="material-icons">sort</span></th>
+                                <th>ImdbId <span class="material-icons">sort</span></th>
+                                <th>&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,13 +53,13 @@ class Search extends Component {
                                    <td>{d.Title}</td>
                                    <td>{d.Year}</td>
                                    <td>{d.imdbID}</td>
+                                   <td><span class="material-icons">delete</span></td>
                                </tr>
                            ))
                        }
 
                         </tbody>
                     </table>
-                </div>
                 </div>
             </div>
         )
